@@ -1,0 +1,48 @@
+#JUMBLED WORDS GAME (IN PYTHON)
+
+import random
+from os import name, system
+from random import shuffle
+from time import sleep
+
+
+def clear():
+  _ = system('cls') if name == 'nt' else system('clear')
+
+def gameover():
+  print(F"Well played!\nYour score: {score}")
+
+
+wordlist = ["apple", "banana", "orange", "watermelon", "mango", "grapes", "plum", "kiwi", "cherry", "strawberry"]
+
+indexes = range(0, len(wordlist))
+listRan = random.sample(indexes, len(indexes))
+number = 1
+score = 0
+m = 0
+n = 30
+
+for i in listRan:
+  word = wordlist[int(i)]
+  word = list(word)
+  shuffle(word)
+  word = "".join(word)
+  print(f"Word {number}: {word}")
+  answer = input("Your guess: ")
+
+  if answer.lower() == wordlist[int(i)]:
+    score = score + 10
+    print("\nCorrect answer!\n+10 points")
+    
+  else:
+    score = score - 5
+    print("\nWrong answer!\n-5 point")
+
+  print(f"Score: {score}")
+  number = number + 1
+  sleep(2)
+  clear()
+  
+  if number == len(wordlist) + 1:
+    print("All questions completed.")
+    gameover()
