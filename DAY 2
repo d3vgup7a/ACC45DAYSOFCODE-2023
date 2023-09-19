@@ -1,0 +1,55 @@
+import random
+from os import name, system
+from time import sleep
+
+
+def clear():
+  _ = system('cls') if name == 'nt' else system('clear')
+
+
+xyz = "y"
+global user
+while xyz.lower() == "y" or xyz == "yes":
+  user = input("Enter r, p or s: ")
+  user = user.lower()
+  while user != "r" and user != "p" and user != "s":
+   user = input("Plese enter a valid option: ")
+  
+  r = "rock"
+  p = "paper"
+  s = "scissors"
+
+
+  rps = [r, p, s]
+  x = random.choice(rps)
+
+  print("\nComputer chooses "+ x)
+
+
+  if x[0] == user:
+    print("Draw")
+
+  elif user == r[0]:
+    if x[0] == p[0]:
+      print("You lost!")
+    else:
+      print("You won!")
+
+  elif user == p[0]:
+    if x[0] == s[0]:
+      print("You lost!")
+    else:
+      print("You won!")
+
+  elif user == s[0]:
+    if x[0] == r[0]:
+      print("You lost!")
+    else:
+      print("You won!")
+
+  sleep(1)
+  xyz = input("\nDo you want to play again?: ")
+  clear()
+
+else:
+  print("Game over.")
