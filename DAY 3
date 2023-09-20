@@ -1,0 +1,23 @@
+from os import name, system
+
+kk="yes"
+
+def clear():
+  _ = system('cls') if name == 'nt' else system('clear')
+
+while(kk.lower()=="yes"):
+  num=int(input("enter the number: "))
+
+  xyz= num % 2
+
+  if (xyz == 1):
+     print("it is an odd number\n")
+
+  else:
+    print("it is an even number\n")
+
+  kk=input('type "yes" if you want to try again - ')
+  clear()
+
+else:
+  print("session ended.")
