@@ -1,0 +1,17 @@
+from os import name, system
+from time import sleep
+
+start="positive"
+
+
+def clear():
+  _ = system("cls") if name == "nt" else system("clear")
+
+
+while (start == "positive"):
+
+  import time
+  clock=time.strftime("%H:%M:%S")
+  print(clock)
+  sleep(1)
+  clear()
