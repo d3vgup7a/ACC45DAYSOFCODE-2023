@@ -1,0 +1,18 @@
+import time
+
+clock=time.strftime("%H:%M:%S")
+print(clock)
+
+hourinput=int(time.strftime("%H"))
+
+if (hourinput >= 4) and (hourinput < 12):
+  print("good morning")
+
+elif (hourinput >= 12) and (hourinput < 16):
+  print("good afternoon")
+
+elif (hourinput >= 16) and (hourinput < 22):
+  print("good evening")
+
+else:
+  print("good night")
