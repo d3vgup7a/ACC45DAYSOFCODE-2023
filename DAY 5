@@ -1,0 +1,37 @@
+from os import name, system
+from time import sleep
+
+
+def clear():
+  _ = system('cls') if name == 'nt' else system('clear')
+
+
+def timer():
+  valid = "please give a value between 0 and 59: "
+  
+  m=int(input("minute: "))
+  while not (m >= 0 and m <= 59):
+    m=int(input(valid)) 
+    
+  n=int(input("second: "))
+  while not (n >= 0 and n <= 59):
+    n=int(input(valid))
+  
+  clear()
+  
+  while (n >= 0 and m >= 0):
+    print(m, "min", n, "sec")
+    n = n - 1
+    sleep(1)
+    clear()
+  
+    if (n == 0 and m > 0):
+      m = m - 1
+      n = 60
+  
+    if (n == 0 and m == 0):
+      break
+  
+  print("time's up!")
+
+timer()
