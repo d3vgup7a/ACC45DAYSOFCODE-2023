@@ -1,0 +1,8 @@
+x = int(input("Enter the number of accounts followed: ")) #following
+y = int(input("Enter he number of followers: "))           #followers
+
+if (x >= 10*y): 
+  print("\nSpam account detected.") 
+
+else:
+  print("\nIt is not a spam account.")
