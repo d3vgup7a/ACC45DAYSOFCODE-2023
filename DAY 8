@@ -1,0 +1,22 @@
+g = "Enter the geyser's capicity in litre: "
+b = "Enter a bucket's capicity in litre: "
+def Input():
+  global x, y
+  x = int(input(g))     #geysers capacity
+  y = int(input(b))     #buckets capacity
+  
+  while not 1 <= x <= 100 or not 1 <= y <= 100:
+    print("\nPlease enter a value between 1 and 100.\n")
+    x = int(input(g))
+    y = int(input(b))
+
+try:
+  Input()
+    
+except ValueError:
+  print("\nPlease enter an integer between from 1 to 100.")
+  Input()
+
+people = x // (2*y)
+
+print(f"\nThe maximum number of people that can take a bath is {people}.")
