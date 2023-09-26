@@ -1,0 +1,27 @@
+r = "Rent of the cooler per month: "
+b = "Cost of the cooler: "
+
+def Input():
+  global x, y
+  x = int(input(r))
+  y = int(input(b))
+
+  while not 1 <= x <= 1000000000 or not 1 <= y <= 1000000000:
+    print("\nPlease enter a value between 1 and 10^9.\n")
+    x = int(input(r))
+    y = int(input(b))
+
+try:
+  Input()
+
+except ValueError:
+  print("\nPlease enter an integer between from 1 to 10^9.")
+  Input()
+
+final = y // x
+
+if (final < 1) or (final == 1):
+  print("\nChef should buy the cooler.")
+
+else:
+  print(f"Chef can rent the cooler for {final} months.")
