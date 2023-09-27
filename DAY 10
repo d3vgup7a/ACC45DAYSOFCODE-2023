@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main(void) {
+  int T;
+  int a, b, c, d, e;
+
+  scanf("%d", &T);
+
+  while (T > 0) {
+  
+    scanf("%d %d %d %d %d", &a, &b, &c, &d, &e);
+    
+    if ((((a + b) <=  d) && (c <= e)) || (((b + c) <= d) && (a <= e)) || (((a + c) <= d) && (b <= e))) {
+      printf("YES");
+    }
+    else {
+      printf("NO");
+    }
+    
+    T--;
+  }
+  return 0;
+}
