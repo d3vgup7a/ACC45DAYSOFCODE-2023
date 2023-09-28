@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main(void) {
+  int T, N, M, check;     //n = runs needed, m = overs
+
+  scanf("%d", &T);
+
+  while (T > 0) {
+
+    scanf("%d %d", &N, &M);
+    
+    check = M*6*6;
+
+    if (check >= N) {
+      printf("YES");
+    }
+    else {
+      printf("NO");
+    }
+    T--;
+  }
+}
