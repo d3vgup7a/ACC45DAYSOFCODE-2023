@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main(void) {
+	int T, X, Y, Z, time, gap;
+  
+  scanf("%d", &T);
+
+  while (T > 0) {
+    scanf("%d %d %d", &X, &Y, &Z);
+
+    time = Y / X;
+    if ((Z - time) > 1){
+      printf("\n%d", Z - time);
+    }
+    else {
+      printf("0");
+    }
+    T--;
+  }
+	return 0;
+}
