@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main(void) {
+	int t, x, y, remainder, ySteps, steps; //x = stairs, y = stairs per step
+  scanf("%d", &t);
+
+  while (t > 0) {
+    scanf("%d %d", &x, &y);
+
+    remainder = x % y;
+    ySteps = (x - remainder) / y;
+    steps = remainder + ySteps;
+
+    printf("\n%d", steps);
+    
+    t--;
+  }
+	return 0;
+}
