@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main(void) {
+	int T, n, x, y, moves;
+
+  scanf("%d", &T);
+
+  while (T > 0) {
+    scanf("%d %d", &n, &x);
+    
+    y = n - x;
+
+    (y >= x) ? printf("%d", x): printf("%d", y);
+
+    T--;
+  }
+	return 0;
+}
