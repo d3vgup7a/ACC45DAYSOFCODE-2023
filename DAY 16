@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main(void) {
+	int n, m, T, check, check_even;  //         n = candies             m = people
+
+  scanf("%d", &T);
+
+  while (T--)  {
+    scanf("%d %d", &n, &m);
+
+    check = n % m;
+    check_even = (n / m) % 2;
+
+    if (check == 0 && check_even == 0) {
+      printf("\nYES");
+    }
+    else {
+      printf("\nNO");
+    }
+  }
+	return 0;
+}
