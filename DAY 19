@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main(void) {
+	int T, PA, PB, QA, QB, p, q;
+
+  scanf("%d", &T);
+  
+  while (T--) {
+    scanf("%d %d %d %d", &PA, &PB, &QA, &QB);
+
+    (PA > PB) ? (p = PA) : (p = PB);
+
+    (QA > QB) ? (q = QA) : (q = QB);
+
+    if (p > q) {
+      printf("\nQ");
+    }
+    else {
+      if (p < q) {
+        printf("\nP");
+      }
+      else {
+        printf("\nTIE");
+      }
+    }
+  }
+	return 0;
+}
