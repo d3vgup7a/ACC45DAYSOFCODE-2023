@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main(void) {
+  char ope;
+  int inpt, num1, num2, result;
+  
+  printf("What operation do you want to do? type +, -,  /, or *\n");
+  scanf("%c", &ope);
+
+  printf("Enter two numbers: ");
+  scanf("%d %d", &num1, &num2);
+
+  switch (ope) {
+    case '+':
+      result = num1 + num2;
+      break;
+    case '-':
+      result = num1 - num2;
+      break;
+    case '/':
+      result = num1 / num2;
+      break;
+    case '*':
+      result = num1 * num2;
+  }
+  printf("%d", result);
+}
