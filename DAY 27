@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+  int p, r, t, ans;
+
+  printf("Enter the principle amount: ");
+  scanf("%d", &p);
+
+  printf("Enter the rate of interest: ");
+  scanf("%d", &r);
+
+  printf("Enter the time period: ");
+  scanf("%d", &t);
+
+  ans = (p * r * t) / 100;
+
+  printf("The simple interest is: %d", ans);
+
+  return 0;
+}
