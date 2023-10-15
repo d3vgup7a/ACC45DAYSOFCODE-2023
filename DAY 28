@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main(void) {
+  int t, x, marks, incorrect;
+  
+  scanf("%d", &t);
+  
+  while (t--) {
+    scanf("%d", &x);
+    marks = x*3;
+    
+    if ((x%3) != 0)
+      incorrect = 3 - (x%3);
+    else
+      incorrect = 0;
+
+    printf("%d", incorrect);
+  }
+  return 0;
+}
