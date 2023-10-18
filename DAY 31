@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main(void) {
+  int t, n, x, y, ans;
+
+  scanf("%d", &t);
+
+  while (t--) {
+    scanf("%d %d %d", &n, &x, &y);
+
+    ans = y % x;
+
+    if (ans == 0) {
+      if (y <= n*x)
+        printf("\nYES");
+    }
+    else {
+      printf("\nNO");
+    }
+  }
+  return 0;
+}
