@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+  int t, x, y, ans;
+
+  scanf("%d", &t);
+
+  while (t--) {
+    scanf("%d %d", &x, &y);
+
+    ans = x / y;
+
+    (ans >= 20) ? printf("\n%d", 20) : printf("\n%d", ans);
+  }
+  return 0;
+}
