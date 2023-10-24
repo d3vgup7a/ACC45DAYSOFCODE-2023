@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+  int t, s, x, y, z, ans;
+
+  scanf("%d", &t);
+
+  while (t--) {
+    scanf("%d %d %d %d", &s, &x, &y, &z);
+
+    if ((s - x - y) >= z) {
+      printf("\n%d", 0);
+    }
+    else {
+      if (((s - x) >= z) || ((s - y) >= z)) {
+        printf("\n%d", 1);
+      }
+      else {
+        printf("\n%d", 2);
+      }
+    }
+  }
+  return 0;
+}
