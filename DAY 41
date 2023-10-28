@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+  int t, n, days;
+
+  scanf("%d", &t);
+
+  while (t--) {
+    scanf("%d", &n);
+
+    days = n / 7;
+
+    if (n % 7 > 1) {
+      printf("\n%d", ++days);
+    }
+    else {
+      printf("\n%d", days);
+    }
+  }
+  return 0;
+}
