@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+  int t, p, q, x, y;
+
+  scanf("%d", &t);
+
+  while (t--) {
+    scanf("%d %d", &p, &q);
+
+    x = p + q;
+
+    if (x % 2 == 1) {
+      x++;
+      y = (x / 2) + 1;
+    }
+    else {
+      y = x / 2;
+    }
+
+    if (y % 2 == 1) {
+      printf("\nBob");
+    }
+    else {
+      printf("\nAlice");
+    }
+  }
+}
