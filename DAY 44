@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main() {
+  int x, y, total;
+  
+  scanf("%d %d", &x, &y);
+
+  total = (y / 2) + (x - y);
+
+  printf("\n%d", total);
+
+  return 0;
+}
